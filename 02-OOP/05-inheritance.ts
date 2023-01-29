@@ -66,7 +66,7 @@
     private steamMilk(): void {
       console.log('Steaming some milk... 🍼');
     }
-    makeCoffee(shots: number): { shots: number; hasMilk: boolean } {
+    makeCoffee(shots: number): CoffeeCup {
       const coffee = super.makeCoffee(shots);
       this.steamMilk();
       return {
