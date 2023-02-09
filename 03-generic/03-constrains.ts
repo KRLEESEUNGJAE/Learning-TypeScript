@@ -38,3 +38,20 @@ const leeAfterPay = pay(lee);
 
 jsonAfterPay.workFullTime();
 leeAfterPay.workPartTime();
+
+const obj = {
+  name: 'lee',
+  age: 30,
+};
+
+const obj2 = {
+  emoji: '😀',
+};
+
+console.log(getValue(obj, 'name')); // lee
+console.log(getValue(obj, 'age')); // 30
+console.log(getValue(obj2, 'emoji')); // 😀
+
+function getValue<T, K extends keyof T>(obj: T, key: K): T[K] {
+  return obj[key];
+}
